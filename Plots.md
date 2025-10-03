@@ -8,7 +8,7 @@ The `plots/` folder contains visualizations generated from the simulated galaxie
 
 - **Shape Analysis Visualizations:**  
   - ![Ellipticity Histogram](plots/Ellipticity_Histogram.png) – distribution of galaxy ellipticities  
-  - ![g1 vs g2 Scatter Plot](Plots/g1_vs_g2_Scatter.png) – scatter plot of shear components  
+  - ![g1 vs g2 Scatter Plot](Plots/Scatterplot.png) – scatter plot of shear components  
 
 **Notes:**  
 - All images are generated using the provided Colab notebook.  
