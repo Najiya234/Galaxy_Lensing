@@ -1,7 +1,5 @@
 # Galaxy Simulation and Weak Lensing Analysis
 
-# GalaxyLens: Galaxy Simulation and Weak Lensing Analysis
-
 This project demonstrates the simulation of realistic spiral and elliptical galaxies and a quantitative analysis of their shapes under **PSF blurring**, **observational noise**, and **weak gravitational lensing shear** using Python.
 
 ---
