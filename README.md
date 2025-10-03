@@ -1,63 +1,80 @@
 # Galaxy Simulation and Weak Lensing Analysis
+
+# GalaxyLens: Galaxy Simulation and Weak Lensing Analysis
+
+This project demonstrates the simulation of realistic spiral and elliptical galaxies and a quantitative analysis of their shapes under **PSF blurring**, **observational noise**, and **weak gravitational lensing shear** using Python.
+
+---
+
 ## Project Overview
-**GalaxyLens** simulates **spiral and elliptical galaxies** using **GalSim**, applies **PSF convolution** and **observational noise**, and demonstrates a small **weak lensing shear**. The main goal is to visualize the effect of PSF, noise, and shear on galaxy images.  
 
-This project provides a **reproducible pipeline** for galaxy simulation and visualization, suitable for learning weak lensing concepts and astrophysical image processing.
+The project is divided into **two main parts**:
+
+### Part 1 – Galaxy Simulation and Visualization
+- Simulate spiral and elliptical galaxies using **GalSim**.  
+- Apply **Point Spread Function (PSF) convolution** and **Gaussian/Poisson noise** to mimic observational conditions.  
+- Apply a small **weak lensing shear** to demonstrate its effect.  
+- Save simulated galaxy images as **FITS files** and **PNG visualizations**.
+
+### Part 2 – Quantitative Shape Analysis
+- Measure galaxy shapes using **adaptive moments**:
+  - **Ellipticity (e)**  
+  - **Shear components (g1, g2)**  
+  - **Moments sigma** (size indicator)  
+- Store measurements in a CSV file for reproducibility.  
+- Visualize results:
+  - **Histogram of ellipticity**  
+  - **Scatter plot of g1 vs g2**  
+- Analyze and interpret the effects of PSF, noise, and weak lensing shear.
 
 ---
 
-## Workflow
-1. **Simulate Galaxies**
-   - Generate spiral and elliptical galaxies with variable flux and half-light radius.
-   - Apply PSF convolution and moderate Gaussian/Poisson noise.
-   - Apply a small weak lensing shear (g1=0.02, g2=0.01).
+## Results
 
-2. **Visualize Galaxies**
-   - Save simulated galaxies as FITS files in `data/`.
-   - Save corresponding PNG images in `plots/`.
+- **Visualizations:**  
+  - Galaxies appear realistic with clear spiral and elliptical profiles.  
+  - PSF blurring and noise effects are visible in the images.  
+
+- **Shape Measurements:**  
+  - Most galaxies have **low to moderate ellipticity**.  
+  - Applied weak lensing shear produces **small but measurable shifts** in g1 and g2.  
+  - Histograms and scatter plots confirm the quantitative effects of PSF, noise, and shear.
+
+- **Observations:**  
+  - PSF slightly rounds galaxies, reducing ellipticity.  
+  - Noise introduces small scatter in shape measurements.  
+  - Weak lensing shear shifts shapes in a measurable way, validating the pipeline.
 
 ---
 
-## How to Run
-1. **Clone the repository**
+## Dependencies
+
+- Python 3.x  
+- numpy  
+- matplotlib  
+- pandas  
+- seaborn  
+- astropy  
+- galsim  
+
+Install dependencies via pip if needed:
 ```bash
-git clone <your-repo-url>
-cd GalaxyLens
+pip install numpy matplotlib pandas seaborn astropy galsim
 ```
+## Optional / Additional Work
 
-2.Install requirement
-```bash
-pip install -r requirements.txt
-```
-3.Run the simulation and visualization
-```bash
-python scripts/simulate_galaxies.py
-```
+- Extend the simulation to **larger datasets** for better statistics.  
+- Compare **pre- and post-shear measurements** to quantify weak lensing signals.  
+- Generate **separate distributions** for spiral vs elliptical galaxies.  
+- Explore **correlations between galaxy type and ellipticity/shear**.  
 
-Check outputs
--data/ contains FITS images of simulated galaxies.
--plots/ contains PNG visualizations.
+---
 
-GalaxyLens - Simulation Script
+## Project Summary
 
-This script simulates spiral and elliptical galaxies using GalSim, applies PSF convolution,
-adds noise, applies a small weak lensing shear, and saves images.
+**GalaxyLens** provides a full pipeline from **galaxy simulation** to **quantitative shape analysis**, illustrating how **PSF, noise, and weak lensing shear** affect galaxy observations.  
+This project can serve as a foundation for further studies in **astrophysical image analysis** and **weak lensing research**.
 
-Results:
-- FITS images of galaxies saved in 'data/'.
-- PNG visualizations saved in 'plots/'.
 
-Dependencies:
-- Python 3.x
-- numpy
-- matplotlib
-- galsim
-- astropy
-
-Usage:
-1. Run this script to generate simulated galaxy images:
-   python scripts/simulate_galaxies.py
-2. Check 'data/' for FITS files and 'plots/' for PNG visualizations.
-"""
 
 
