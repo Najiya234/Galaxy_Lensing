@@ -23,21 +23,41 @@ This project provides a **reproducible pipeline** for galaxy simulation and visu
 ```bash
 git clone <your-repo-url>
 cd GalaxyLens
-Install dependencies
+'''
 
-bash
-Copy code
+2.Install requirements
+'''bash
 pip install -r requirements.txt
-Run the simulation and visualization
-
-bash
-Copy code
+'''
+3.Run the simulation and visualization
+'''bash
 python scripts/simulate_galaxies.py
+'''
+
 Check outputs
+-data/ contains FITS images of simulated galaxies.
+-plots/ contains PNG visualizations.
 
-data/ contains FITS images of simulated galaxies.
+GalaxyLens - Simulation Script
 
-plots/ contains PNG visualizations.
+This script simulates spiral and elliptical galaxies using GalSim, applies PSF convolution,
+adds noise, applies a small weak lensing shear, and saves images.
 
+Results:
+- FITS images of galaxies saved in 'data/'.
+- PNG visualizations saved in 'plots/'.
+
+Dependencies:
+- Python 3.x
+- numpy
+- matplotlib
+- galsim
+- astropy
+
+Usage:
+1. Run this script to generate simulated galaxy images:
+   python scripts/simulate_galaxies.py
+2. Check 'data/' for FITS files and 'plots/' for PNG visualizations.
+"""
 
 
