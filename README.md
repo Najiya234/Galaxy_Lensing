@@ -30,7 +30,7 @@ cd GalaxyLens
 pip install -r requirements.txt
 ```
 3.Run the simulation and visualization
-'''bash
+```bash
 python scripts/simulate_galaxies.py
 ```
 
