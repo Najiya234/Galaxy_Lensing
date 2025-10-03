@@ -25,14 +25,14 @@ git clone <your-repo-url>
 cd GalaxyLens
 '''
 
-2.Install requirements
-'''bash
+2.Install requirement
+```bash
 pip install -r requirements.txt
-'''
+```
 3.Run the simulation and visualization
 '''bash
 python scripts/simulate_galaxies.py
-'''
+```
 
 Check outputs
 -data/ contains FITS images of simulated galaxies.
