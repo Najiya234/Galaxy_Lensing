@@ -23,7 +23,7 @@ This project provides a **reproducible pipeline** for galaxy simulation and visu
 ```bash
 git clone <your-repo-url>
 cd GalaxyLens
-'''
+```
 
 2.Install requirement
 ```bash
